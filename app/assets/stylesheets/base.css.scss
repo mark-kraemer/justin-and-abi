@@ -1,5 +1,14 @@
+@import "variables";
+
 body {
-  display: block;
   width: 600px;
-  margin: 20px auto !important;
+  margin: 20px auto;
+  font-family: sans-serif;
+}
+
+hr {
+  background: $lightgrey;
+  border: 0;
+  height: 1px;
+  margin: 20px 0;
 }

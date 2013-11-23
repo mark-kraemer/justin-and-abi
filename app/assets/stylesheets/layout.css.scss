@@ -1,10 +1,5 @@
 @import "variables";
 
-#viewport {
-  position: relative;
-  min-height: 100%;
-}
-
 .right {
   float: right;
 }
@@ -20,6 +15,50 @@
   display: inline-block;
 }
 
-// form {
+input[type="text"] {
+  border: 2px solid #bdc3c7;
+  border-radius: 6px;
+  font-size: 15px;
+  padding: 8px 12px;
+  width: 60%;
 
+  &:focus {
+    border-color: #1abc9c;
+    outline: none;
+  }
+}
+
+input[type="submit"] {
+  background: $green;
+  border: none;
+  width: 100%;
+  border-radius: 6px;
+  color: white;
+  padding: 10px 19px;
+  font-size: 17px;
+  line-height: 1.471;
+  cursor: pointer;
+}
+
+.field {
+  clear: both;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+
+label {
+  font-size: 17px;
+  line-height: 12px;
+  padding: 13.5px 20px 11.5px 0;
+  color: $blue;
+  clear: both;
+  display: inline-block;
+  float: left;
+  width: 30%;
+
+}
+
+// label {
+//   display: block;
 // }
