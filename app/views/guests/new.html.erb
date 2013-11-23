@@ -1,16 +1,16 @@
-<h1>Hi there</h1>
+<h1>form</h1>
 
 <%= form_for @guest do |f| %>
 
   <%= f.label :name %>
-  <%= f.text_field :name %>
+  <%= f.text_field :name, class: 'form-control' %>
 
   <%= f.label :email %>
-  <%= f.text_field :email %>
+  <%= f.text_field :email, class: 'form-control' %>
 
   <%= f.label :head_count %>
-  <%= f.text_field :head_count %>
+  <%= f.text_field :head_count, class: 'form-control' %>
 
-  <%= f.submit %>
+  <%= f.submit 'Submit', class: 'btn btn-primary btn-wide' %>
 
 <% end %>
