@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  accommodations: MyString
+  attending: false
+  comments: MyText
+  email: MyString
+  head_count: 1
+  name: MyString
+
+two:
+  accommodations: MyString
+  attending: false
+  comments: MyText
+  email: MyString
+  head_count: 1
+  name: MyString
