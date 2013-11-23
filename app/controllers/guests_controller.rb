@@ -7,10 +7,14 @@ class GuestsController < ApplicationController
   def create
     @guest = Guest.new guest_params
     if @guest.save
-      redirect_to root_path
+      redirect_to thankyou_path
     else
       render :new
     end
+  end
+
+  def thankyou
+
   end
 
   private
