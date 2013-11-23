@@ -1,0 +1,30 @@
+@import "variables";
+
+.subnav {
+  left: 220px;
+  z-index: 1;
+}
+
+#viewport {
+  position: relative;
+  min-height: 100%;
+}
+
+.right {
+  float: right;
+}
+.left {
+  float: left;
+}
+
+.inline {
+  display: inline;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+form {
+   text-align: center;
+}
