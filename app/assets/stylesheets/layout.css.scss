@@ -23,7 +23,7 @@ h1 {
 }
 
 input[type="text"] {
-  border: 2px solid #bdc3c7;
+  border: 2px solid $medgrey;
   border-radius: 6px;
   font-size: 15px;
   padding: 8px 12px;
@@ -47,13 +47,6 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-.field {
-  clear: both;
-  display: inline-block;
-  position: relative;
-  width: 100%;
-}
-
 label {
   font-size: 17px;
   line-height: 12px;
@@ -63,9 +56,52 @@ label {
   display: inline-block;
   float: left;
   width: 30%;
-
 }
 
-// label {
-//   display: block;
-// }
+.field {
+  clear: both;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+
+  + .field {
+    padding-top: 10px;
+  }
+}
+
+.yes_no {
+
+  label {
+    clear: none;
+    width: 12%;
+    color: white;
+    text-align: center;
+    padding-left: 3%;
+    cursor: pointer;
+
+    &.yes {
+      background: lighten($green, 10%);
+      border-radius: 6px 0 0 6px;
+    }
+
+    &.no {
+      background: $medgrey;
+      border-radius: 0 6px 6px 0;
+    }
+  }
+
+  input[type="radio"] {
+    display: none;
+
+    &:checked + label {
+
+      &.yes {
+        background: darken($green, 10%);
+      }
+
+      &.no {
+        background: darken($medgrey, 10%);
+      }
+    }
+  }
+}

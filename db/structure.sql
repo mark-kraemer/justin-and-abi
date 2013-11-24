@@ -36,7 +36,6 @@ CREATE TABLE guests (
     id integer NOT NULL,
     name character varying(255),
     email character varying(255),
-    accommodations character varying(255),
     attending boolean,
     comments text,
     head_count integer,

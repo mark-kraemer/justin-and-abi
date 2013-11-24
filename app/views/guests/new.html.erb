@@ -2,17 +2,27 @@
 
 <%= form_for @guest do |f| %>
 
-  <div class="field">
+  <div class='field'>
     <%= f.label :name %>
     <%= f.text_field :name %>
   </div>
 
-  <div class="field">
+  <div class='field'>
     <%= f.label :email %>
     <%= f.text_field :email %>
   </div>
 
   <div class="field">
+    <%= label_tag :attending, 'Will you be attending?', class: 'attending' %>
+    <div class='yes_no'>
+      <input id="yes" name="yes_or_no" type="radio" value="1">
+      <%= label_tag 'yes', 'Yes', class: 'yes', id: 'yes' %>
+      <input id="no" name="yes_or_no" type="radio" value="0">
+      <%= label_tag 'no', 'No', class: 'no', id: 'no' %>
+    </div>
+  </div>
+
+  <div class='field'>
     <%= f.label :head_count %>
     <%= f.text_field :head_count %>
   </div>
@@ -22,3 +32,4 @@
   <%= f.submit 'Submit' %>
 
 <% end %>
+

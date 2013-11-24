@@ -3,7 +3,6 @@ class CreateGuests < ActiveRecord::Migration
     create_table :guests do |t|
       t.string :name
       t.string :email
-      t.string :accommodations
       t.boolean :attending
       t.text :comments
       t.integer :head_count
