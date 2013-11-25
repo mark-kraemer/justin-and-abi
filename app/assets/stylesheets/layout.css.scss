@@ -22,12 +22,20 @@ h1 {
   font-weight: 300;
 }
 
+h2 {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 30px;
+  font-weight: 300;
+}
+
 input[type="text"] {
   border: 2px solid $medgrey;
   border-radius: 6px;
   font-size: 15px;
   padding: 8px 12px;
   width: 61%;
+  float: right;
 
   &:focus {
     border-color: #1abc9c;
@@ -78,9 +86,11 @@ label {
     text-align: center;
     padding-left: 3%;
     cursor: pointer;
+    margin-top: 3px;
 
     &.yes {
-      background: lighten($green, 10%);
+      background: $green;
+      margin-left: 7px;
       border-radius: 6px 0 0 6px;
     }
 
@@ -100,8 +110,21 @@ label {
       }
 
       &.no {
-        background: darken($medgrey, 10%);
+        background: darken($medgrey, 20%);
       }
     }
   }
+
+  input[type="text"] {
+    width: 23%;
+    float: right;
+    margin: 3px 0 0 0;
+    padding: 7px 12px 8px 12px;
+  }
 }
+
+textarea {
+  @extend input[type="text"];
+  height: 100px;
+}
+

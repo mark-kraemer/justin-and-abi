@@ -1,4 +1,7 @@
-<h1>RSVP</h1>
+<h1>Justin and Abigail</h1>
+<h2>RSVP</h2>
+
+<hr>
 
 <%= form_for @guest do |f| %>
 
@@ -15,16 +18,17 @@
   <div class="field">
     <%= label_tag :attending, 'Will you be attending?', class: 'attending' %>
     <div class='yes_no'>
-      <input id="yes" name="yes_or_no" type="radio" value="1">
-      <%= label_tag 'yes', 'Yes', class: 'yes', id: 'yes' %>
-      <input id="no" name="yes_or_no" type="radio" value="0">
-      <%= label_tag 'no', 'No', class: 'no', id: 'no' %>
+      <%= f.radio_button :attending, 1 %>
+      <%= label_tag 'guest_attending_1', 'Yes', class: 'yes', id: 'yes' %>
+      <%= f.radio_button :attending, 0 %>
+      <%= label_tag 'guest_attending_0', 'No', class: 'no', id: 'no' %>
+      <%= f.text_field :head_count, placeholder: 'Number attending', style: 'display: none;' %>
     </div>
   </div>
 
-  <div class='field'>
-    <%= f.label :head_count %>
-    <%= f.text_field :head_count %>
+  <div class="field">
+    <%= f.label :comments %>
+    <%= f.text_area :comments %>
   </div>
 
   <hr>
@@ -33,3 +37,6 @@
 
 <% end %>
 
+<script>
+  new RsvpForm()
+</script>

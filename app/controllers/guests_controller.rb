@@ -14,12 +14,11 @@ class GuestsController < ApplicationController
   end
 
   def thankyou
-
   end
 
   private
 
   def guest_params
-    params.require(:guest).permit :name, :email, :head_count
+    params.require(:guest).permit :name, :email, :head_count, :attending, :comments
   end
 end
