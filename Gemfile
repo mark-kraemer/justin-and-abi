@@ -12,9 +12,7 @@ gem 'turbolinks'
 
 gem 'rails_serve_static_assets'
 
-
-# Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 
 group :development do
