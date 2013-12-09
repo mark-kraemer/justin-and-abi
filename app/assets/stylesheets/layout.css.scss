@@ -43,6 +43,10 @@ input[type="text"] {
   }
 }
 
+input[type="password"] {
+  @extend input[type="text"];
+}
+
 input[type="submit"] {
   background: $green;
   border: none;

@@ -1,5 +1,11 @@
 class GuestsController < ApplicationController
 
+  before_filter :authorize, only: :index
+
+  def index
+
+  end
+
   def new
     @guest = Guest.new
   end
