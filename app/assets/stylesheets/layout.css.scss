@@ -29,6 +29,12 @@ h2 {
   font-weight: 300;
 }
 
+h3 {
+  color: $blue;
+  margin: 15px 0;
+  width: 20%;
+}
+
 input[type="text"] {
   border: 2px solid $medgrey;
   border-radius: 6px;
@@ -137,5 +143,19 @@ textarea {
   color: darken($medgrey, 40%);
   line-height: 1.4;
   display: none;
+}
+
+.block {
+  background: lighten($lightgrey, 10%);
+  display: inline-block;
+  padding: 20px;
+  width: 100%;
+  font-size: 15px;
+  line-height: 20px;
+  border: solid 1px $green;
+
+  & + .block {
+    border-top: none;
+  }
 }
 

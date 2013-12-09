@@ -3,7 +3,7 @@ class GuestsController < ApplicationController
   before_filter :authorize, only: :index
 
   def index
-
+    @guests = Guest.all
   end
 
   def new
@@ -12,7 +12,7 @@ class GuestsController < ApplicationController
 
   def create
     @guest = Guest.new guest_params
-    if @guest.save
+    if @guest.save!
       redirect_to thankyou_path
     else
       render :new

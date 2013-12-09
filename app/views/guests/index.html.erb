@@ -1,0 +1,35 @@
+<h1>Guest list</h1>
+<h2>Number attending: <%= @guests.attending_head_count %></h2>
+
+<h3>Attending</h3>
+
+<% @guests.attending.each do |guest| %>
+  <div class="block">
+    <%= guest.name %>
+
+    <span class="right">
+      <% if guest.comments.present? %>
+        "<%= guest.comments %>"
+        /
+      <% end %>
+
+      Head Count: <%= guest.head_count %>
+    </span>
+
+  </div>
+<% end %>
+
+<h3>Not Attending</h3>
+
+<% @guests.not_attending.each do |guest| %>
+  <div class="block">
+    <%= guest.name %>
+
+    <span class="right">
+      <% if guest.comments.present? %>
+        "<%= guest.comments %>"
+      <% end %>
+    </span>
+
+  </div>
+<% end %>
